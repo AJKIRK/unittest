@@ -1,0 +1,3 @@
+given an account balance of £1000.00 and a transaction amount of £250.00
+that when the "Update Account Balance" function is called 
+assert that the account balance returned is £1250.00
