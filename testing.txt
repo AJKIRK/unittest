@@ -1,3 +1,42 @@
+//Unit Test
 given an account balance of £1000.00 and a transaction amount of £250.00
 that when the "Update Account Balance" function is called 
 assert that the account balance returned is £1250.00
+
+//Integration Test
+given Obtain Details Account Micro Service (GET) is initiated for an account
+assert that the response to the request has a status of 200 and text of 'OK
+
+//System Test
+given the Create Account Micro Service (POST) is initiated for account ssbbbbaaaaaaaa
+assert that the respnse to the request has a status of 201 and text of 'Created'
+
+given the Obtain Account Micro Service (GET) is initiated for account ssbbbbaaaaaaaa
+assert that the respnse to the request has a status of 200 and text of 'OK and that
+the account balance in the response is £0.00
+
+given the Update Account Balance Micro Service (PUT) is initiated for account 
+ssbbbbaaaaaaaa with a transaction amount of £250.00 assert that the respnse to the request has
+ a status of 200 and text of 'OK and that
+the account balance 
+
+given the Obtain Account Micro Service (GET) is initiated for account ssbbbbaaaaaaaa
+assert that the respnse to the request has a status of 200 and text of 'OK and that
+the account balance in the response is £250.00
+
+//Acceptance Test
+As a customer I want to log into internet banking and navigate to the "My Accounts" page
+
+given user is on "My Account" page   
+when the user clicks on the "View Account" button for account ssbbbbaaaaaaaa
+then they are taken to the "Account Details" page for account ssbbbbaaaaaaaa
+
+given user is on "Account Details" page   
+when the user clicks on the "Transfer Funds" button for account ssbbbbaaaaaaaa
+then they are taken to the "Transfer Funds" page for account and see option buttons, "Own Account" 
+and "Other Account", to allow them to select the type of transfer
+
+given user is on "Transfer Funds" page  
+when the user clicks on option button "Own Account"
+then they are taken to page showing a list of all their existing accounts with LBG that 
+they can transfer money to
